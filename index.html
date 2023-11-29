@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Vertiefung</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        html {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        span {
+            color: grey
+        }
+
+        ul li:nth-of-type(5) {
+            color: red;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>GIT VERTIEFUNG</h1>
+            <article>
+                <ol>
+                    <li>Erstelle ein Projekt & eine Repo</li>
+                    <li>Lade das Team ein</li>
+                    <li>Nun erstellst du eine Branch</li>
+                    <ul>
+                        <li>git branch "name" <span class="red">--> zeigt alle branches an</span></li>
+                        <li>git checkout "name"<span class="red">--> erstellt Branches</li>
+                        <li>git checkout -b "name"<span class="red">-->shortcut fürs erstellen</li>
+                        <li>git branch -d "name"<span class="red">--> so kann eine branch gelöscht werden</span></li>
+                        <li>git branch -D "name"</li>
+                        <li>git branch</li>
+                    </ul>
+                </ol>
+            </article>
+
+            <article>
+                <h2>Commits --> <br>zeigen dir alle bisherigen kommentare an</h2>
+                <div class="commits">
+                <ul>
+                    <li><span>git log --all</li>
+                    <li><span>git log --oneline</li>
+                    <li><span>git log --graph</li>
+                    <li>mit "q" kommst du aus der Ansicht wieder raus</li>
+                </div>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Das Mergen</h2>
+                <p>Sobald sämtliche Teams ihre Änderungen erfolgreich in den main Branch eingebracht haben
+                    und <br>
+                    dieser auf dem neuesten Stand ist,  ist es nun an der Zeit, die Inhalte des Main Branches in unseren
+                    eigenen Zweig zu mergen</p>
+                <ol>
+                    <li>Falls du dich nicht in deiner Branch befindest -> <span class="red"> checkout 'Name'</span> </li>
+                    <li>git merge main <span class="red">-> main wird mit der branch gemerged</span></li>
+                    <li>git checkout main --> <span class="red">navigiert dich zurück ins Main</li>
+                    <li>lösche die Branch, wenn du sie nicht mehr benötigst -><span class="red">git branch -d </span></li>
+                </ol>
+            </article>
+
+            <article>
+                <h2>Commit zurück gehen und Änderungen übernehmen</h2>
+                <ol>
+                    <li>du kannst git <span class="red"> log -- </span> verwenden, um die Liste der Commit-IDs anzuzeigen</li>
+                    <ul>
+                        <li>die id auswählen, die man haben möchte ->
+                            <span>Vorraussätzung ist, dass du regelmäßig pusht</span>
+                        </li>
+                        <br>
+                    </ul>
+                    <li>Du möchtest aus einem bestimmten Commit einen neuen Branch erstellen und auf diesen wechseln.
+                    </li>
+
+                    <ul>
+                        <li><span class="red">git checkout -b "neuer-branch-name" "commit-id"</span></li>
+                    </ul>
+                    <br>
+                    <li>git add .</li>
+                    <li>git commit -m "back"</li>
+                    <li>git push origin "neuer-branch-name"</li>
+                </ol>
+            </article>
+
+            <article class="workflow">
+                <h2>GIT WORKFLOW Variante 1</h2>
+                <ul>
+                    <li>Entwickler arbeiten in ihren Feature-Zweigen und führen regelmäßige Commits durch.</li>
+                    <li>Diese Commits werden periodisch in das Remote-Repository gepusht, um die Änderungen zu sichern
+                        und die
+                        Zusammenarbeit zu erleichtern.
+                    </li>
+                    <li>Wenn die Feature-Entwicklung fertiggestellt ist und Tests bestanden hat, wird ein Pull Request
+                        (oder
+                        Merge Request) erstellt.
+                    </li>
+                    <li>Der Pull Request wird von anderen Teammitgliedern überprüft. Nach der Genehmigung wird der
+                        Feature-Zweig
+                        in den Hauptzweig gemergt.
+                    </li>
+                    <li>Der Feature-Zweig wird nur dann gelöscht, wenn seine Änderungen erfolgreich in den Hauptzweig
+                        integriert
+                        wurden und er nicht mehr benötigt wird.
+                    </li>
+                </ul>
+            </article>
+    </main>
+</body>
+
+</html>

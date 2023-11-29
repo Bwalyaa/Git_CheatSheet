@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 17px;
+    background-image: url("../img/144565.jpeg");
+    height: 100%;  /* Änderung hier */
+    background-attachment: fixed;  /* Änderung hier */
+    background-repeat: no-repeat;
+    color: rgb(109, 20, 20);
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: grey;
+}
+
+h2 {
+    color: red;
+}
+
+.red {
+    color: red;
+}
